@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package gyak10112;
-
+import java.util.Scanner;
 /**
  *
  * @author user3
@@ -53,6 +53,39 @@ public class Gyak10112 {
         //stringből substring kivétele
         System.out.println(szoveg.substring(3));
         System.out.println(szoveg.substring(3,6));
+        
+        //feladatok:
+        //Kérjük be egy diák teljes nevét a fullName változóba!
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Adja meg a diák teljes nevét:");
+        String fullName = scanner.nextLine();
+        //Szedjük szét a nevet firstName és lastName változókba!
+        String[] arr = fullName.split(" ");
+        String firstName = arr[0];
+        String lastName = arr[1];
+        System.out.println(firstName);
+        System.out.println(lastName);
+        //Kérjük be az osztály azonosítóját a classId változóba.
+        System.out.println("Adja meg az osztályazonosítóját:");
+        String classId = scanner.nextLine();
+        //4es feladat:
+        if (classId.charAt(4) == 'e') {
+                    classId = classId.replaceFirst("e", "E");
+        }
+        System.out.println(classId);
+        //5ös feladat:
+        int evfolyam = Integer.parseInt(classId.substring(0,4));
+        if (evfolyam < 2022) classId = classId.toUpperCase();
+        System.out.println(classId);
+        //6os feladat:
+        if (classId.equals(classId.toUpperCase()))
+            System.out.println("Estis osztály");
+            
+        }
+        
+            
+        }
+        
+        
     }
     
-}
