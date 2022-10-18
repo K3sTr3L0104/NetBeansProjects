@@ -48,40 +48,6 @@ public class Gyak1014 {
             }
         }
         System.out.println("A legkisebb szám az:"+min);
-        //
-        
-        
-        
-                //LKKT
-        //Kérjünk be 2 pozitív egész számot!
-        //Számoljuk ki a legkisebb közös többszörösüket
-        Scanner scanner = new Scanner (System.in);
-        System.out.println("Adjon meg 2 pozitív egész számot!:");
-        int szam = scanner.nextInt();
-        int szam2 = scanner.nextInt();
-        //primtényezős felbontása az első számnak:
-        for (int i = 2; i<szam; i++) {
-            while(szam%i==0) {
-                System.out.println(i+" ");
-                szam=szam/i;
-            }
-        }
-        if (szam>2) {
-            System.out.println(szam);
-        }
-        System.out.println("--------------------------------------");
-                //primtényezős felbontása a második számnak:
-        for (int i = 2; i<szam2; i++) {
-            while(szam2%i==0) {
-                System.out.println(i+" ");
-                szam2=szam2/i;
-            }
-        }
-        if (szam2>2) {
-            System.out.println(szam2);
-        }
-        int szamok1[] = new int[];
-        int szamok2[] = new int[];
     }
     
 }
