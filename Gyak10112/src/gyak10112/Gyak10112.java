@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package gyak10112;
+import java.util.Random;
 import java.util.Scanner;
 /**
  *
@@ -88,4 +89,62 @@ public class Gyak10112 {
         
         
     }
+----------------------------------
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package sajatmethod;
+
+import java.util.Random;
+import java.util.Scanner;
+
+/**
+ *
+ * @author user3
+ */
+public class SajatMethod {
+
+    //Metódusok és osztályok helye
+    public static double atlag(int szam1, int szam2) {
+        double atl = (szam1 + szam2) / 2.0;
+        return atl;
+    }
+
+    public static int veletlen(int also, int felso) {
+        Random rand = new Random();
+        int randomSzam = rand.nextInt(felso - also + 1) + also;
+        return randomSzam;
+    }
+
+    public static void main(String[] args) {
+        Scanner bill = new Scanner(System.in);
+        System.out.println("Adj meg 1 számot:");
+        int also = bill.nextInt();
+        System.out.println("Adj meg még egy számot:");
+        int felso = bill.nextInt();
+
+        //Két szám átlaga
+        System.out.println(atlag(4, 5));
+
+        
+        //veletlen method meghívása
+        veletlen(also,felso);
+        
+        //Random szám generálása bekért tartományból
+        System.out.print("Adj meg egy egész számot: ");
+        int a = bill.nextInt();
+        System.out.print("Adj meg még egy egész számot: ");
+        int b = bill.nextInt();
+        
+        if (a < b){
+            System.out.println(veletlen(a,b));
+        } else if (b < a) {
+            System.out.println(veletlen(b,a));
+        } else System.out.println("A két számból nem generálható véletlen szám.");
+    }
+
+}
+
     
